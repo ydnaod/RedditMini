@@ -1,4 +1,5 @@
 import React from 'react'
+import './Sub.css';
 
 export function Sub(){
     return (

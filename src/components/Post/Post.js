@@ -1,4 +1,5 @@
 import React from 'react'
+import './Post.css';
 
 export function Post(){
     return(
