@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import {NavBar} from '../NavBar/NavBar'
+import {PostList} from '../PostList/PostList'
+import {SubList} from '../SubList/SubList'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <NavBar />
+      <PostList />
+      <SubList />
     </div>
   );
 }

@@ -7,3 +7,8 @@ html,
 html {
   font-size: 18px;
 }
+
+.App {
+    height: 100%;
+    padding: 0 17% 10% 17%;
+  }
