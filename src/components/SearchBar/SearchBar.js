@@ -1,10 +1,10 @@
 import React from 'react'
 import './SearchBar.css';
 
-export function SearchBar(){
+export function SearchBar(props){
     return (
         <div className='SearchBar'>
-            <input type='text'/>
+            <input type='text' placeholder="Search"/>
         </div>
     );
 }

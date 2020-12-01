@@ -3,11 +3,11 @@ import { render } from 'react-dom'
 import {SearchBar} from '../SearchBar/SearchBar'
 import './NavBar.css'
 
-export function NavBar(){
+export function NavBar(props){
     return (
         <div className='NavBar'>
             <h1 className='brand'>RedditMini</h1>
-            <SearchBar />
+            <SearchBar searchResults={props.searchResults}/>
             <div></div>
         </div>
     );
