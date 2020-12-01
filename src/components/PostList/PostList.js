@@ -4,7 +4,7 @@ import './PostList.css';
 
 export function PostList(){
     return (
-        <div>
+        <div className="PostList">
             <Post />
             <Post />
         </div>

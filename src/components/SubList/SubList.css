@@ -1,0 +1,10 @@
+.SubList {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-block-start: 22.41px;
+    margin-block-end: 22.41px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    width:30%;
+    background: white;
+    border-radius: 3px;
+}

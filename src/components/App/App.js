@@ -8,8 +8,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <PostList />
-      <SubList />
+      <div className="content">
+        <PostList />
+        <SubList />
+      </div>
     </div>
   );
 }
