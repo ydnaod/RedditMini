@@ -6,7 +6,7 @@ export function Post(props){
         <div className="Post">
             <h2>A real reddit post</h2>
             <h1>{
-            props.post.title
+                props.post ? props.post.title : ''
             }</h1>
         </div>
     );

@@ -6,7 +6,7 @@ import axios from '../../util/Axios';
 export function PostList(props){
 
     const [page, setPage] = useState([]);
-    const {loading, setLoading} = useState(false);
+    const [loading, setLoading] = useState(false);
     const [hasError, setHasError] = useState(false);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ export function PostList(props){
           return request;
         }
         fetchData();
-      }, [loading]);
+      }, []);
 
     return (
         <div className="PostList">
