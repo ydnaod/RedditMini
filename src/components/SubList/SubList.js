@@ -12,9 +12,9 @@ export function SubList(props){
     useEffect(() => {
         async function fetchData(){
           setLoading(true);
-          console.log(loading);
           const request = await axios.get("/subreddits/.json").then(response => 
                 {
+                    console.log(response);
                     setSubList(response.data.data.children.map(post => ({
                         id: post.data.id,
                         name: post.data.name,
