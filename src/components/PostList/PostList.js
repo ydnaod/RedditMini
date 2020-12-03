@@ -19,6 +19,12 @@ export function PostList(props){
                         id: post.data.id,
                         name: post.data.name,
                         title: post.data.title,
+                        url: post.data.url,
+                        created_utc: post.data.created_utc,
+                        author: post.data.author,
+                        num_comments: post.data.num_comments,
+                        score: post.data.score,
+                        post_hint: post.data.post_hint,
                     })))
                     setLoading(false);
              }
@@ -28,7 +34,6 @@ export function PostList(props){
                 setLoading(false);
             })
         ;
-          //setPage(request.data.data.children);
           return request;
         }
         fetchData();
@@ -36,10 +41,8 @@ export function PostList(props){
 
     return (
         <div className="PostList">
-            <Post />
-            <Post />
             {
-                loading ? <div>Loading...</div> : hasError ? <div>error...</div> :
+                //loading ? <div>Loading...</div> : hasError ? <div>error...</div> :
                 page.map(post => {
                     return <Post post={post}
                                 key = {post.id}
