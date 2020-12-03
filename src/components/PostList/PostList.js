@@ -25,6 +25,8 @@ export function PostList(props){
                         num_comments: post.data.num_comments,
                         score: post.data.score,
                         post_hint: post.data.post_hint,
+                        reddit_video_preview: post.data.reddit_video_preview,
+                        
                     })))
                     setLoading(false);
              }
