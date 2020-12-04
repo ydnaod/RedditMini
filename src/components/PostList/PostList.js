@@ -12,7 +12,6 @@ export function PostList(props){
     useEffect(() => {
         async function fetchData(){
           setLoading(true);
-          console.log(loading);
           const request = await axios.get(props.url).then(response => 
                 {
                     setPage(response.data.data.children.map(post => ({
@@ -26,9 +25,23 @@ export function PostList(props){
                         score: post.data.score,
                         post_hint: post.data.post_hint,
                         reddit_video_preview: post.data.reddit_video_preview,
-
+                        hidden: checkKeyword(props.searchResults, post.data.title),
                     })))
                     setLoading(false);
+
+                    /*setPage(response.data.data.children.map(post => ({
+                        id: post.data.id,
+                        name: post.data.name,
+                        title: post.data.title,
+                        url: post.data.url,
+                        created_utc: post.data.created_utc,
+                        author: post.data.author,
+                        num_comments: post.data.num_comments,
+                        score: post.data.score,
+                        post_hint: post.data.post_hint,
+                        reddit_video_preview: post.data.reddit_video_preview,
+                    })))
+                    setLoading(false);*/
              }
             ).catch(err => {
                 console.log(err);
@@ -40,6 +53,26 @@ export function PostList(props){
         }
         fetchData();
       }, [props.url, props.searchResults]);
+
+      const checkKeyword = (word, list) => {
+        if(!word){
+            return;
+        }
+        let hidden = false;
+        const lowerWord = word.toLowerCase();
+        const stringList = list.split(" ");
+        const lowerList = [];
+        stringList.forEach(word => lowerList.push(word.toLowerCase()));
+        console.log(stringList);
+        if(lowerList.findIndex(element => element === lowerWord) !== -1){
+            hidden = false;
+        }
+        else{
+            hidden = true;
+        }
+        
+        return hidden;
+      }
 
     return (
         <div className="PostList">
