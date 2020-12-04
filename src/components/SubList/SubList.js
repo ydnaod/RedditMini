@@ -17,7 +17,7 @@ export function SubList(props){
                     console.log(response);
                     setSubList(response.data.data.children.map(post => ({
                         id: post.data.id,
-                        name: post.data.name,
+                        icon_img: post.data.icon_img,
                         display_name: post.data.display_name,
                         url: post.data.url,
                         created_utc: post.data.created_utc,
@@ -26,7 +26,6 @@ export function SubList(props){
                         score: post.data.score,
                         post_hint: post.data.post_hint,
                         reddit_video_preview: post.data.reddit_video_preview,
-                        
                     })))
                     setLoading(false);
              }
