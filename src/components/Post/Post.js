@@ -3,6 +3,15 @@ import './Post.css';
 
 export function Post(props){
     const loadingDiv = <h3>Loading...</h3>;
+    let hiddenStyle = {
+        
+    };
+
+    if(props.post.hidden){
+        hiddenStyle = {
+            display: 'none'
+        };
+    }
 
     let isImage = false;
     if(props.post.post_hint === 'image'){
@@ -17,7 +26,7 @@ export function Post(props){
     }
 
     return(
-        <div className="Post">
+        <div className="Post" style={hiddenStyle}>
             <div className="votes">
                 <h6>{score}</h6>
             </div>

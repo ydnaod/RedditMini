@@ -7,7 +7,7 @@ import axios from '../../util/Axios'
 
 function App() {
 
-  const [searchResults, setSearchResults] = useState('Search');
+  const [searchResults, setSearchResults] = useState('');
   const [url, setUrl] = useState("r/popular/.json");
 
   const handleSubChange = (url) => {
