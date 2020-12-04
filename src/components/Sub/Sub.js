@@ -10,7 +10,7 @@ export function Sub(props){
     return (
         <div className="Sub">
             <div className="subReddit">
-                <img src={props.sub.icon_img}/>
+                <img className="subImage" src={props.sub.icon_img}/>
                 <h4 onClick={handleClick}>{props.sub.display_name}</h4>
             </div>
         </div>

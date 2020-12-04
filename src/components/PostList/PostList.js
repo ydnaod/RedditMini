@@ -39,7 +39,7 @@ export function PostList(props){
           return request;
         }
         fetchData();
-      }, [props.url]);
+      }, [props.url, props.searchResults]);
 
     return (
         <div className="PostList">

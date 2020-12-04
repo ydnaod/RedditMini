@@ -11,14 +11,19 @@ function App() {
   const [url, setUrl] = useState("r/popular/.json");
 
   const handleSubChange = (url) => {
-    setUrl(`r/${url}/.json`)
+    setUrl(`r/${url}/.json`);
+  }
+
+  const handleSearchChange = (text) => {
+    setSearchResults(text);
   }
 
   return (
     <div className="App">
-      <NavBar searchResults={searchResults}/>
+      <NavBar searchResults={searchResults}
+        handleSearchChange={handleSearchChange}/>
       <div className="content">
-        <PostList url={url}/>
+        <PostList url={url} searchResults={searchResults}/>
         <SubList handleSubChange={handleSubChange}/>
       </div>
     </div>
