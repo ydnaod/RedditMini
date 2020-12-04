@@ -8,30 +8,23 @@ import axios from '../../util/Axios'
 function App() {
 
   const [searchResults, setSearchResults] = useState('Search');
+  const [url, setUrl] = useState("r/popular/.json");
 
+  const handleSubChange = (url) => {
+    setUrl(`r/${url}/.json`);
+  }
 
-  const [page, setPage] = useState([]);
-
-  useEffect(() => {
-    async function fetchData(){
-      const request = await axios.get("/popular/.json");
-      setPage(request.data.data.children.map(post => ({
-        id: post.data.id,
-        name: post.data.name,
-        title: post.data.title,
-    })));
-      //setPage(request.data.data.children);
-      return request;
-    }
-    fetchData();
-  }, []);
+  const handleSearchChange = (text) => {
+    setSearchResults(text);
+  }
 
   return (
     <div className="App">
-      <NavBar searchResults={searchResults}/>
+      <NavBar searchResults={searchResults}
+        handleSearchChange={handleSearchChange}/>
       <div className="content">
-        <PostList setPage={setPage} page={page}/>
-        <SubList />
+        <PostList url={url} searchResults={searchResults}/>
+        <SubList handleSubChange={handleSubChange}/>
       </div>
     </div>
   );

@@ -1,0 +1,17 @@
+.Sub {
+    display: flex;
+    flex-direction: column;
+}
+
+.subReddit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.subImage {
+    max-height: 35px;
+    width: auto;
+    border-radius: 50%;
+}
