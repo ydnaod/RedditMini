@@ -13,7 +13,7 @@ export function PostList(props){
         async function fetchData(){
           setLoading(true);
           console.log(loading);
-          const request = await axios.get("r/popular/.json").then(response => 
+          const request = await axios.get(props.url).then(response => 
                 {
                     setPage(response.data.data.children.map(post => ({
                         id: post.data.id,
@@ -39,7 +39,7 @@ export function PostList(props){
           return request;
         }
         fetchData();
-      }, []);
+      }, [props.url]);
 
     return (
         <div className="PostList">

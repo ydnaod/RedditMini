@@ -18,7 +18,7 @@ export function SubList(props){
                     setSubList(response.data.data.children.map(post => ({
                         id: post.data.id,
                         name: post.data.name,
-                        title: post.data.title,
+                        display_name: post.data.display_name,
                         url: post.data.url,
                         created_utc: post.data.created_utc,
                         author: post.data.author,
@@ -48,6 +48,7 @@ export function SubList(props){
                 subList.map(sub => {
                     return <Sub sub={sub}
                                 key = {sub.id}
+                                handleSubChange = {props.handleSubChange}
                             />
                 })
                 
