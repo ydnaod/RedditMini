@@ -1,18 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Post.css';
 
 export function Post(props){
     const loadingDiv = <h3>Loading...</h3>;
-
-    let hiddenStyle = {
-        
-    };
-
-    if(props.post.hidden){
-        hiddenStyle = {
-            display: 'none'
-        };
-    }
 
     let isImage = false;
     if(props.post.post_hint === 'image'){
@@ -27,12 +17,12 @@ export function Post(props){
     }
 
     return(
-        <div className="Post" style={hiddenStyle}>
+        <div className="Post">
             <div className="votes">
                 <h6>{score}</h6>
             </div>
             <div className="postContent">
-                <a href={props.post.url} target='_blank'><h3>{props.post ? props.post.title : loadingDiv}</h3></a>
+                <a rel="noreferrer" href={props.post.url} target='_blank'><h3>{props.post ? props.post.title : loadingDiv}</h3></a>
                 {isImage && <img src={props.post.url}/>}
                 <div className="postDetails">
                     <h5>{props.post.author}</h5>

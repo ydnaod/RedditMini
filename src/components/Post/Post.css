@@ -13,11 +13,6 @@
     transition: all .25s ease-in;
 }
 
-@keyframes hover {
-    0% {}
-    100% {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.4)}
-}
-
 .Post:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     animation-duration: .25s;

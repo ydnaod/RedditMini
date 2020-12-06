@@ -6,32 +6,33 @@ import axios from '../../util/Axios';
 export function PostList(props){
 
     const [page, setPage] = useState([]);
+    const [pageData, setPageData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [hasError, setHasError] = useState(false);
+    let data = []
 
     useEffect(() => {
-        if(props.searchResults === ''){
+        if(!props.searchResults){
             async function fetchData(){
             setLoading(true);
             const request = await axios.get(props.url).then(response => 
                     {
-                        if(props.searchResults === '')
-                        {
-                            setPage(response.data.data.children.map(post => ({
-                                id: post.data.id,
-                                name: post.data.name,
-                                title: post.data.title,
-                                url: post.data.url,
-                                created_utc: calculateTime(post.data.created_utc),
-                                author: post.data.author,
-                                num_comments: post.data.num_comments,
-                                score: post.data.score,
-                                post_hint: post.data.post_hint,
-                                reddit_video_preview: post.data.reddit_video_preview,
-                                hidden: checkKeyword(props.searchResults, post.data.title),
-                            })))
+                        data = response.data.data.children.map(post => ({
+                            id: post.data.id,
+                            name: post.data.name,
+                            title: post.data.title,
+                            url: post.data.url,
+                            created_utc: calculateTime(post.data.created_utc),
+                            author: post.data.author,
+                            num_comments: post.data.num_comments,
+                            score: post.data.score,
+                            post_hint: post.data.post_hint,
+                            reddit_video_preview: post.data.reddit_video_preview,
+                        }))
+                            setPage(data)
+                            setPageData(data)
                             setLoading(false);
-                        }
+                        
                 }
                 ).catch(err => {
                     console.log(err);
@@ -44,8 +45,8 @@ export function PostList(props){
             fetchData();
         }
         else{
-            setPage(prev =>  prev.filter(post => checkKeywordBool(props.searchResults, post.title)));
-            }
+            setPage(prev =>  pageData.filter(post => checkKeywordBool(props.searchResults, post.title)));
+        }
       }, [props.url, props.searchResults]);
 
       const checkKeywordBool = (word, list) => {
@@ -58,33 +59,8 @@ export function PostList(props){
         stringList.forEach(word => lowerList.push(word.toLowerCase()));
         console.log(lowerList.includes(lowerWord));
         return lowerList.includes(lowerWord);
-        /*if(lowerList.findIndex(element => element === lowerWord) !== -1){
-            console.log(lowerList + 'true');
-            return true;
-        }
-        else{
-            console.log(lowerList + 'false')
-            return false;
-        }*/
       }
 
-      const checkKeyword = (word, list) => {
-        if(!word){
-            return;
-        }
-        let hidden = false;
-        const lowerWord = word.toLowerCase();
-        const stringList = list.split(" ");
-        const lowerList = [];
-        stringList.forEach(word => lowerList.push(word.toLowerCase()));
-        if(lowerList.findIndex(element => element === lowerWord) !== -1){
-            hidden = false;
-        }
-        else{
-            hidden = true;
-        }
-        return hidden;
-      }
 
       const calculateTime = (utc) => {
         const now = Date.now();
