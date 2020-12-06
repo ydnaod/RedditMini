@@ -7,10 +7,22 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 22.41px;
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+@keyframes hover {
+    0% {}
+    100% {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.4)}
 }
 
 .Post:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    animation-duration: .25s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 img {
