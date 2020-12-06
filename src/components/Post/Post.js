@@ -32,7 +32,7 @@ export function Post(props){
                 <h6>{score}</h6>
             </div>
             <div className="postContent">
-                <h3>{props.post ? props.post.title : loadingDiv}</h3>
+                <a href={props.post.url} target='_blank'><h3>{props.post ? props.post.title : loadingDiv}</h3></a>
                 {isImage && <img src={props.post.url}/>}
                 <div className="postDetails">
                     <h5>{props.post.author}</h5>
