@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Post.css';
 
 export function Post(props){
     const loadingDiv = <h3>Loading...</h3>;
+
     let hiddenStyle = {
         
     };
@@ -35,6 +36,7 @@ export function Post(props){
                 {isImage && <img src={props.post.url}/>}
                 <div className="postDetails">
                     <h5>{props.post.author}</h5>
+                    <h5>{props.post.created_utc}</h5>
                     <h5>{props.post.num_comments} comments</h5>
                 </div>
             </div>
