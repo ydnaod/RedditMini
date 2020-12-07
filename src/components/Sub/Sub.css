@@ -15,3 +15,12 @@
     width: auto;
     border-radius: 50%;
 }
+
+.subImg:before {
+    content: ' ';
+    display: block;
+    max-height: 35px;
+    width: auto;
+    border-radius: 50%;
+    background-image: url(../../images/reddit-logo.png);
+}

@@ -78,12 +78,19 @@ export function PostList(props){
         }
     }
 
+    const loadingBlock = [<LoadingDiv key = '1'/>
+        ,<LoadingDiv key = '2'/>
+        ,<LoadingDiv key = '3'/>
+        ,<LoadingDiv key = '4'/>
+        ,<LoadingDiv key = '5'/>
+        ,<LoadingDiv key = '6'/>
+        ,<LoadingDiv key = '7'/>]
+
     return (
         <div className="PostList">
-            <LoadingDiv />
             {
                 
-                loading ? <LoadingDiv /> : hasError ? <div>error...</div> :
+                loading ? loadingBlock : hasError ? <div>error...</div> :
                 page.map(post => {
                     return <Post post={post}
                                 key = {post.id}

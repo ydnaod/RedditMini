@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Sub} from '../Sub/Sub'
 import './SubList.css'
 import axios from '../../util/Axios';
+import redditLogo from '../../images/reddit-logo.png'
 
 export function SubList(props){
 
@@ -17,7 +18,7 @@ export function SubList(props){
                     console.log(response);
                     setSubList(response.data.data.children.map(post => ({
                         id: post.data.id,
-                        icon_img: post.data.icon_img,
+                        icon_img: (post.data.icon_img ? post.data.icon_img : redditLogo),
                         display_name: post.data.display_name,
                         url: post.data.url,
                         created_utc: post.data.created_utc,
