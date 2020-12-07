@@ -1,0 +1,62 @@
+.LoadingDiv {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 3px;
+    margin-left: 22.41px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 22.41px;
+}
+
+.votes {
+    margin: 22.41px;
+}
+
+.postDetails{
+    display: flex;
+    justify-content: space-between;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: rgb(206, 206, 206);
+}
+
+h5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.postContent{
+    width: 100%;
+    padding-right: 10px;
+}
+
+.bigBox {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.gradient {
+    background: repeating-linear-gradient(90deg,#dbdbdb,#dbdbdb,#dbdbdb,rgb(235, 235, 235) ,  #dbdbdb,#dbdbdb,#dbdbdb);
+    background-size: 200% 200%;
+    color: transparent;
+
+    -webkit-animation: GreyGradient 2s ease infinite;
+    -moz-animation: GreyGradient 2s ease infinite;
+    animation: GreyGradient 2s ease infinite;
+}
+
+@-webkit-keyframes GreyGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:50% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes GreyGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:50% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes GreyGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:150% 50%}
+    100%{background-position:350% 50%}
+}

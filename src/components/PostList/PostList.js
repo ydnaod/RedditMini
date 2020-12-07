@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Post} from '../Post/Post'
 import './PostList.css';
 import axios from '../../util/Axios';
+import {LoadingDiv} from '../LoadingDiv/LoadingDiv';
 
 export function PostList(props){
 
@@ -79,8 +80,10 @@ export function PostList(props){
 
     return (
         <div className="PostList">
+            <LoadingDiv />
             {
-                //loading ? <div>Loading...</div> : hasError ? <div>error...</div> :
+                
+                loading ? <LoadingDiv /> : hasError ? <div>error...</div> :
                 page.map(post => {
                     return <Post post={post}
                                 key = {post.id}
