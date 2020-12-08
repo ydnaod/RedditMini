@@ -9,6 +9,7 @@ export function SubList(props){
     const [subList, setSubList] = useState([]);
     const [loading, setLoading] = useState();
     const [hasError, setHasError] = useState();
+    const [isSelected, setIsSelected] = useState();
 
     useEffect(() => {
         async function fetchData(){
@@ -41,6 +42,10 @@ export function SubList(props){
         fetchData();
       }, []);
 
+      const handleIsSelectedChange = (key) => {
+        setIsSelected(key);
+      }
+
     return (
         <div className="SubList">
             <h1>SubReddits</h1>
@@ -49,6 +54,8 @@ export function SubList(props){
                     return <Sub sub={sub}
                                 key = {sub.id}
                                 handleSubChange = {props.handleSubChange}
+                                isSelected = {isSelected === sub.id ? true : false}
+                                handleIsSelectedChange = {handleIsSelectedChange}
                             />
                 })
                 
