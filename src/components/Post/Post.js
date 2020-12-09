@@ -19,7 +19,9 @@ export function Post(props){
     return(
         <div className="Post">
             <div className="votes">
+                <i className="arrow up"></i>
                 <h6>{score}</h6>
+                <i className="arrow down"></i>
             </div>
             <div className="postContent">
                 <a rel="noreferrer" href={props.post.url} target='_blank'><h3>{props.post ? props.post.title : loadingDiv}</h3></a>
