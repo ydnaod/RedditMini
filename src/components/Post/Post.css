@@ -24,19 +24,6 @@ img {
     width: 100%;
 }
 
-.votes {
-    display: flex;
-    margin: 22.41px;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-h6 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 h3 {
     margin-bottom: 15px;
 }
@@ -75,24 +62,4 @@ a {
     color: rgb(43, 43, 43);
 }
 
-.arrow {
-    border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.arrow:hover {
-    cursor: pointer;
-}
-
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-  }
-
-  .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
 
