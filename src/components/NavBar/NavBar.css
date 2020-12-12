@@ -9,3 +9,23 @@
     background: white;
 }
 
+.image {
+    max-height: 35px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.orange {
+    color: rgb(255, 68, 0);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.brand {
+    margin-left: 10px;
+}
