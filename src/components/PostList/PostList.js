@@ -3,6 +3,7 @@ import {Post} from '../Post/Post'
 import './PostList.css';
 import axios from '../../util/Axios';
 import {LoadingDiv} from '../LoadingDiv/LoadingDiv';
+import {calculateTime} from '../../util/calculateTime'
 
 export function PostList(props){
 
@@ -20,6 +21,7 @@ export function PostList(props){
                     {
                         data = response.data.data.children.map(post => ({
                             id: post.data.id,
+                            subreddit: post.data.subreddit,
                             name: post.data.name,
                             title: post.data.title,
                             url: post.data.url,
@@ -61,22 +63,6 @@ export function PostList(props){
         console.log(lowerList.includes(lowerWord));
         return lowerList.includes(lowerWord);
       }
-
-
-      const calculateTime = (utc) => {
-        const now = Date.now();
-        const nowDate = new Date(now);
-        const postDate = new Date(utc * 1000);
-        const diffTime = Math.abs(nowDate - postDate);
-        const diffHours = (Math.ceil(diffTime / (1000 * 60 * 60)).toString() + ' hours ago');
-        const diffDays = (Math.ceil(diffTime / (1000 * 60 * 60 * 24)).toString() + ' days ago');
-        if(Math.ceil(diffTime / (1000 * 60 * 60)) >= 24){
-            return diffDays;
-        }
-        else{
-            return diffHours;
-        }
-    }
 
     const loadingBlock = [<LoadingDiv key = '1'/>
         ,<LoadingDiv key = '2'/>

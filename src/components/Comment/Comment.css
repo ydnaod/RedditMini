@@ -1,0 +1,13 @@
+.Comment {
+    display: flex;
+    border: grey;
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 22.46px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.commentContent {
+    display: flex;
+    flex-direction: column;
+}

@@ -16,7 +16,6 @@ export function SubList(props){
           setLoading(true);
           const request = await axios.get("/subreddits/.json").then(response => 
                 {
-                    console.log(response);
                     setSubList(response.data.data.children.map(post => ({
                         id: post.data.id,
                         icon_img: (post.data.icon_img ? post.data.icon_img : redditLogo),

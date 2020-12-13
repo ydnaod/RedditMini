@@ -8,7 +8,10 @@ export function Sub(props){
         props.handleIsSelectedChange(props.sub.id);
     }
 
-    const selectedColor = 'rgb(195, 195, 195)'
+
+    //gray rgb(195, 195, 195)
+    //orange rgb(255, 175, 146)
+    const selectedColor = 'rgb(255, 175, 146)'
     const selected = {
         backgroundColor: props.isSelected ? selectedColor : 'white',
     }
