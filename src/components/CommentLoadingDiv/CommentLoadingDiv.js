@@ -3,27 +3,19 @@ import './CommentLoadingDiv.css';
 
 export function CommentLoadingDiv(){
     return (
-        <div className="LoadingDiv">
-            <div className="votes">
-                <h6 className='gradient'>6</h6>
+    <div className="Comment">
+        <div className="commentContent">
+            <div className="author">
+                <h5 className="gradient">author</h5>
             </div>
-            <div className="postContent">
-                <h3 className='gradient'>content</h3>
-                <div className='bigBox gradient'>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                </div>
-                <div className="postDetails">
-                    <h5 className='gradient'>content</h5>
-                    <h5 className='gradient'>content</h5>
-                    <h5 className='gradient'>content</h5>
-                </div>
-            </div>
+            <h5 className="gradient">
+                content<br/>
+                content<br/>
+            </h5>
         </div>
+        <div className="date">
+            <h6 className="gradient">date</h6>
+        </div>
+    </div>
     );
 }

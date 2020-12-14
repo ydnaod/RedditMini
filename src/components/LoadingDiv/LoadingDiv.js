@@ -18,7 +18,7 @@ export function LoadingDiv(){
                     content<br/>
                     content<br/>
                 </div>
-                <div className="postDetails">
+                <div className="loadingPostDetails">
                     <h5 className='gradient'>content</h5>
                     <h5 className='gradient'>content</h5>
                     <h5 className='gradient'>content</h5>

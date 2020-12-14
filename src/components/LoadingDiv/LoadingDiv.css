@@ -13,7 +13,7 @@
     margin: 22.41px;
 }
 
-.postDetails{
+.loadingPostDetails{
     display: flex;
     justify-content: space-between;
     border-top-style: solid;

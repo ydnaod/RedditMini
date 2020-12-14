@@ -39,7 +39,13 @@ export function CommentList(props){
         fetchData();
     }, [])
 
-    const loadingBlock = <CommentLoadingDiv />
+    const loadingBlock = [<CommentLoadingDiv />,
+        <CommentLoadingDiv />,
+        <CommentLoadingDiv />,
+        <CommentLoadingDiv />,
+        <CommentLoadingDiv />,
+        <CommentLoadingDiv />];
+        
 
     return (
         <div className="CommentList">

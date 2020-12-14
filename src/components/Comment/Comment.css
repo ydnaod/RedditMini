@@ -5,9 +5,52 @@
     margin-bottom: 22.46px;
     border-radius: 6px;
     width: 100%;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+h5 {
+    font-weight: normal;
+}
+
+p{
+    margin: 0 0 3% 0;
 }
 
 .commentContent {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin-left: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color:rgb(73, 73, 73);
+}
+
+#commentBody{
+    margin-bottom: 0px;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.date {
+    margin-right:3%;
+    color: rgb(131, 131, 131);
+}
+
+.icon {
+    max-height: 20px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.author {
+    display: flex;
+    justify-content: start;
+    color: rgb(255, 68, 0);
 }

@@ -9,31 +9,43 @@
     margin-bottom: 22.41px;
 }
 
-.votes {
-    margin: 22.41px;
-}
-
-.postDetails{
+.Comment {
     display: flex;
+    border: grey;
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 22.46px;
+    border-radius: 6px;
+    width: 100%;
     justify-content: space-between;
-    border-top-style: solid;
-    border-width: 1px;
-    border-color: rgb(206, 206, 206);
 }
 
-h5{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.postContent{
-    width: 100%;
-    padding-right: 10px;
+.commentContent {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color:rgb(73, 73, 73);
 }
 
-.bigBox {
-    width: 100%;
-    margin-bottom: 20px;
+.date {
+    margin-right:3%;
+    color: rgb(131, 131, 131);
 }
+
+.icon {
+    max-height: 30px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.author {
+    display: flex;
+    justify-content: start;
+    color: rgb(255, 68, 0);
+}
+
 
 .gradient {
     background: repeating-linear-gradient(90deg,#dbdbdb,#dbdbdb,#dbdbdb,rgb(235, 235, 235) ,  #dbdbdb,#dbdbdb,#dbdbdb);
