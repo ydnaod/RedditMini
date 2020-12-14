@@ -2,7 +2,7 @@
     display: flex;
     border: grey;
     background-color: rgb(240, 240, 240);
-    margin-bottom: 22.46px;
+    margin-bottom: 12px;
     border-radius: 6px;
     width: 100%;
     justify-content: space-between;
@@ -15,7 +15,7 @@ h5 {
 }
 
 p{
-    margin: 0 0 3% 0;
+    margin: 0 0 10px 0;
 }
 
 .commentContent {

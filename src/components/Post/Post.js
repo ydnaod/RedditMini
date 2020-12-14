@@ -25,7 +25,7 @@ export function Post(props){
             <Score score={props.post.score}/>
             <div className="postContent">
                 <a id="title" rel="noreferrer" href={props.post.url} target='_blank'><h3>{props.post.title}</h3></a>
-                {isImage && <img src={props.post.url}/>}
+                {isImage && <img id="postImage" src={props.post.url}/>}
                 <div className="postDetails">
                     <div className="author">
                         <img className="icon" src={userIcon}/>
