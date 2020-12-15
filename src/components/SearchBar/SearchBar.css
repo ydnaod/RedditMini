@@ -13,3 +13,10 @@
 .SearchBar input:focus {
     outline: none;
   }
+
+  @media only screen and (max-width: 1020px) {
+    .SearchBar input {
+      width: 100%;
+
+    }
+  }

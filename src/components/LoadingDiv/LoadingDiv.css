@@ -25,7 +25,7 @@ h5{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.postContent{
+.loadingPostContent{
     width: 100%;
     padding-right: 10px;
 }
@@ -60,3 +60,15 @@ h5{
     50%{background-position:150% 50%}
     100%{background-position:350% 50%}
 }
+
+@media only screen and (max-width: 1020px) {
+    .LoadingDiv {
+      margin-bottom:22.41px;
+      margin-left: 0px;
+      max-width: 100%;
+    }
+
+    .LoadingPostDetails{
+        font-size: .5em;
+    }
+  }

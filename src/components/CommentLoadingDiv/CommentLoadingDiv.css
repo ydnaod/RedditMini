@@ -72,3 +72,17 @@
     50%{background-position:150% 50%}
     100%{background-position:350% 50%}
 }
+
+@media only screen and (max-width: 1020px) {
+    .CommentLoadingDiv {
+        display: flex;
+      width: 90%;
+      margin-block-start: 22.41px;
+    margin-block-end: 22.41px;
+    }
+
+    .date {
+        width: 60%;
+        padding-left: 4%;
+    }
+  }

@@ -8,6 +8,7 @@
     justify-content: space-between;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
+    flex-direction: column;
 }
 
 h5 {
@@ -21,11 +22,19 @@ p{
 .commentContent {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin-left: 3%;
-    margin-top: 1%;
+    margin-top:0;
     margin-bottom: 1%;
     color:rgb(73, 73, 73);
+}
+
+.commentDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -5px;
+    margin-left: 5px;
 }
 
 #commentBody{
@@ -54,3 +63,13 @@ a:-webkit-any-link {
     justify-content: start;
     color: rgb(255, 68, 0);
 }
+
+@media only screen and (max-width: 1020px) {
+    .Comment {
+      max-width: 100%;
+      font-size: .5em;
+    }
+    #date {
+        font-size: 8px;
+    }
+  }
