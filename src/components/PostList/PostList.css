@@ -3,3 +3,14 @@
     margin-block-start: 22.41px;
     margin-block-end: 22.41px;
 }
+
+@media only screen and (max-width: 1020px) {
+    .PostList {
+      width: 90%;
+      margin-block-start: 22.41px;
+    margin-block-end: 22.41px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    }
+  }

@@ -3,3 +3,12 @@
     justify-content: center;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 1020px) {
+    .CommentList {
+        display: flex;
+      width: 90%;
+      margin-block-start: 22.41px;
+    margin-block-end: 22.41px;
+    }
+  }

@@ -7,7 +7,7 @@ export function LoadingDiv(){
             <div className="votes">
                 <h6 className='gradient'>6</h6>
             </div>
-            <div className="postContent">
+            <div className="loadingPostContent">
                 <h3 className='gradient'>content</h3>
                 <div className='bigBox gradient'>
                     content<br/>
